@@ -10,8 +10,8 @@ var employees = [atticus, jem, boo, scout, robert, mayella];
 var bonusCal = function(emp){
   var bonusArr = [emp[0]];
   var bonus = 0;
-  if (emp[1].length === 4) {
-    bonus += 0.05;
+  if (emp[1].length === 4) {  // checking employees number
+    bonus += 0.05; // if employees # = 4 then add 5% bonus
   }
 
   switch (emp[3]) {
@@ -41,7 +41,7 @@ var bonusCal = function(emp){
     bonus = 0;
   }
 //pushing data to new array
-bonusArr.push(bonus);  //bonus amount in percentage
+bonusArr.push(bonus);  //bonus amount in percentage coming out of switch and if
 bonusArr.push((parseFloat(emp[2]) * (1 + bonus)).toFixed(2));  //new salary amount including bonus
 bonusArr.push(Math.round(parseFloat(emp[2]) * bonus));  //total bonus amount in dollars
 return bonusArr;
@@ -51,4 +51,4 @@ for (var i = 0; i < employees.length; i++) {
   console.log(bonusCal(employees[i]));
 }
 
-// This is the end of bonusCalculator assignment 
+// This is the end of Bonus Calculator assignment
