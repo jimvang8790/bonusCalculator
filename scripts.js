@@ -50,3 +50,5 @@ return bonusArr;
 for (var i = 0; i < employees.length; i++) {
   console.log(bonusCal(employees[i]));
 }
+
+// This is the end of bonusCalculator assignment 
